@@ -10,7 +10,7 @@ class Planets extends React.Component{
      this.loadPlanets("http://swapi.co/api/planets/");
    }
 
-   loadCharacters(url){
+   loadPlanets(url){
      const request = new XMLHttpRequest();
      request.open('GET', url);
      request.onload = () => {
@@ -26,15 +26,15 @@ class Planets extends React.Component{
    render(){
      var planetMap = this.state.planets.map(function(planet, index){
        return (
-       <p key = {index} className = "character-box" >
+       <p key = {index} className = "planet-box" >
        <li>{planet.name}</li>
        </p>
        );
      });
 
      return(
-       <div className = "all-characters">
-       <p>Characters page</p>
+       <div className = "all-planets">
+       <p>Planets page</p>
        <ol>
        {planetMap}
        </ol>

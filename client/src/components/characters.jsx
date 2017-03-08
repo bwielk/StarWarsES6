@@ -28,7 +28,10 @@ class Characters extends React.Component{
     var charMap = this.state.characters.map(function(character, index){
       return (
       <p key = {index} className = "character-box" >
-      <li>{character.name}</li>
+      <li>
+      <p>{character.name}</p>
+      <p>{character.height}</p>
+      </li>
       </p>
       );
     });
