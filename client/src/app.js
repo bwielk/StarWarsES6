@@ -1,6 +1,6 @@
 import React from 'react'
 import {render} from 'react-dom'
-import {Router, Router, IndexRoute, hashHistory} from 'react-router'
+import {Router, Route, IndexRoute, hashHistory} from 'react-router'
 import Main from './components/main.jsx'
 import Home from './components/home.jsx'
 import Planets from './components/planets.jsx'
@@ -17,7 +17,7 @@ window.onload = () => {
     <Route path = 'starships' component = {Starships} />
     <Route path = 'characters' component = {Characters} />
     </Route>
-    </Router>
+    </Router>,
     document.getElementById('app')
     );
 }
